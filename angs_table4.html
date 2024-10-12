@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="DropList" ng-controller="ListCtrl">
+
+<select ng-model="selectedName" ng-options="x for x in names">
+</select>
+
+</div>
+
+<script>
+var app = angular.module('DropList', []);
+app.controller('ListCtrl', function($scope) {
+    $scope.names = ["HYDERABAD", "DELHI", "KOCHIN","BBSR","CTC","BLORE","CHEN"];
+});
+
+
+</script>
+
+
+</body>
+</html>

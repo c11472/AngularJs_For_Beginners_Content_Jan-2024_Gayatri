@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body ng-controller="TableController">
+
+    <h1>This is a sample table demo 2d aray with scope and TableController</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>NameOfEmp</th>
+                <th>AgeOfEmp</th>
+                <th>EmailOfEmp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in users">
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        angular.module('myApp', [])
+            .controller('TableController', function($scope) {
+                $scope.users = [
+                    { name: 'John Doe', age: 28, email: 'john@example.com' },
+                    { name: 'Jane Smith', age: 34, email: 'jane@example.com' },
+                    { name: 'Emily Johnson', age: 22, email: 'emily@example.com' },
+                    { name: 'Michael Brown', age: 40, email: 'michael@example.com' },
+                    { name: 'Test data', age: 47, email: 'testdata47@example.com' }
+
+                ];
+            });
+    </script>
+
+</body>
+</html>

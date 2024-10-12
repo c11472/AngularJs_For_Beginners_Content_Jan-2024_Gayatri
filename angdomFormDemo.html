@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="english">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="FormControl">
+  <form>
+    First Name: <input type="text" ng-model="firstname">
+        Last Name: <input type="text" ng-model="lastname">
+
+  </form>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('FormControl', function($scope) {
+    $scope.firstname = "Gayatri";
+});
+</script>
+
+</body>
+</html>
